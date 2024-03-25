@@ -24,4 +24,16 @@ func main() {
 	var booleano bool
 
 	fmt.Println(entero, decimal, cadena, booleano)
+
+	// Ejercicio suma de dos numeros
+	var primer_numero, segundo_numero int
+	fmt.Println("Ingrese el primer valor: ")
+	fmt.Scan(&primer_numero)
+
+	fmt.Println("Ingrese el segundo valor: ")
+	fmt.Scan(&segundo_numero)
+
+	//var suma = primer_numero + segundo_numero
+	suma := primer_numero + segundo_numero
+	fmt.Println(suma)
 }
