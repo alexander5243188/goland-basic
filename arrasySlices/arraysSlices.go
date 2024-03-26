@@ -37,4 +37,9 @@ func main() {
 	//Append
 	estructura_datos_dinamica = append(estructura_datos_dinamica, 66)
 	fmt.Println("Aplicando append", estructura_datos_dinamica)
+
+	//Apend de una nueva  lista
+	nueva_lista := []int{20, 30, 40, 50, 60, 70}
+	estructura_datos_dinamica = append(estructura_datos_dinamica, nueva_lista...)
+	fmt.Println(estructura_datos_dinamica)
 }
