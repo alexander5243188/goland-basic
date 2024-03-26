@@ -33,4 +33,8 @@ func main() {
 	fmt.Println("[:3]", estructura_datos_dinamica[:3])
 	fmt.Println("[2:7]", estructura_datos_dinamica[2:7])
 	fmt.Println("[5:8]", estructura_datos_dinamica[5:8])
+
+	//Append
+	estructura_datos_dinamica = append(estructura_datos_dinamica, 66)
+	fmt.Println("Aplicando append", estructura_datos_dinamica)
 }
