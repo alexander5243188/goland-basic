@@ -1,6 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
+
+// funcion palindromo
+func palabraAlReves(palabra string) string {
+	var palabraReves string
+	for i := len(palabra) - 1; i >= 0; i-- {
+		palabraReves += string(palabra[i])
+	}
+	return palabraReves
+}
 
 func main() {
 	arreglo_dias := []string{"Lunes", "Martes", "Miercoles", "Jueves"}
@@ -18,4 +30,25 @@ func main() {
 	for i := range arreglo_dias {
 		fmt.Println(i)
 	}
+
+	// Palindromo
+	// Declaramos la variable
+	var texto string
+
+	// Ingresar el usuario la palabra
+	fmt.Println("Ingresa una palabra :")
+
+	// Almacenamos la informacion
+	fmt.Scan(&texto)
+
+	//Convertimos la palabra a minusculas
+	texto = strings.ToLower(texto)
+
+	// comprobamos, si lo que retorna la funcion es la misma palabra
+	if palabraAlReves(texto) == texto {
+		fmt.Println("Ok, es palindromo: ", (palabraAlReves(texto)), "=", texto)
+	} else {
+		fmt.Println("No es palindromo", palabraAlReves(texto), "=", texto)
+	}
+
 }
